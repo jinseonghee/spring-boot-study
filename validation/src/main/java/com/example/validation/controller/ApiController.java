@@ -54,9 +54,6 @@ public class ApiController {
 
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(sb.toString()); //validation에 맞지 않으면, BadRequest return
         }
-
-        //logic
-
         System.out.println(user);
 
         return ResponseEntity.ok(user);
