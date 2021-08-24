@@ -5,6 +5,7 @@ import com.example.validation.annotation.YearMonth;
 import javax.validation.constraints.*;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.List;
 
 public class User {
 
@@ -65,18 +66,19 @@ public class User {
     }
 
     /*
-    @AssertTrue(message = "yyyyMM의 형식에 맞지 않습니다.")
-    public boolean isReqYearMonthValidation() {
+        @AssertTrue(message = "yyyyMM의 형식에 맞지 않습니다.")
+        public boolean isReqYearMonthValidation() {
 
-        try {
-            LocalDate localDate = LocalDate.parse(getReqYearMonth() + "01", DateTimeFormatter.ofPattern("yyyyMMdd")); //LocalData는 format에 day까지 들어가기
-                                                                                                  //때문에 pattern에 dd도 넣어주고, getReqYearMonth에 01을 붙여 형식 만듬
-        } catch (Exception e) {
-            return false;
+            try {
+                LocalDate localDate = LocalDate.parse(getReqYearMonth() + "01", DateTimeFormatter.ofPattern("yyyyMMdd")); //LocalData는 format에 day까지 들어가기
+                                                                                                      //때문에 pattern에 dd도 넣어주고, getReqYearMonth에 01을 붙여 형식 만듬
+            } catch (Exception e) {
+                return false;
+            }
+            return true;  //parsing이 잘 되면 true, 아니면 false
         }
-        return true;  //parsing이 잘 되면 true, 아니면 false
-    }
-*/
+    */
+
     @Override
     public String toString() {
         return "User{" +
