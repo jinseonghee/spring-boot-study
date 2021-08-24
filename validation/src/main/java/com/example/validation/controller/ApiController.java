@@ -1,6 +1,7 @@
 package com.example.validation.controller;
 
 import com.example.validation.dto.User;
+import com.example.validation.dto.User1;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
