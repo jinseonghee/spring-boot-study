@@ -1,6 +1,7 @@
 package com.example.exception.advice;
 
 
+import com.example.exception.controller.ApiController;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.MethodArgumentNotValidException;
@@ -22,7 +23,7 @@ public class GlobalControllerAdvice { //전체적인 Exception을 다 잡음
         System.out.println("---------------------");
         System.out.println(e.getLocalizedMessage());
         System.out.println("---------------------");
-
+        System.out.println(e.getClass().getName());
         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(""); //server에서 일어나는 Error는 Internal server Error
     }
 
